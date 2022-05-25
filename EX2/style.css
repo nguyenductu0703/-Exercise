@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#header{
+    max-width: 400px;
+    max-height:800px;
+    margin: 0  auto;
+
+}
+.image img{
+    margin-top: 20px;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 3px solid #5c0eee;
+}
+.submit a{
+    background-color: blueviolet;
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+    border: 2px solid red;
+    margin: 0 10px;
+}
+.submit{
+    display: flex;
+    justify-content: flex-end;
+}
