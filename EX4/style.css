@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#border {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.tableone {
+    width: 100px;
+    height: 90px;
+    background-color: aquamarine;
+    position: absolute;
+}
+
+.tabletwo {
+    width: 80px;
+    height: 90px;
+    background-color: aqua;
+    position: absolute;
+
+}
+
+.tablethree {
+    position: absolute;
+    width: 50px;
+    height: 90px;
+    background-color: bisque;
+}
+
+.tabletwo:hover,
+.tablethree:hover,
+.tableone:hover {
+    z-index: 1;
+}
+
+.tabletwo:focus,
+.tablethree:focus,
+.tableone:focus {
+    z-index: 1;
+}
