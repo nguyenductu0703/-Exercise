@@ -17,6 +17,7 @@ function App() {
     const userCoppy =[...user]
     const userMember= userCoppy.findIndex((Item)=>Item.id===users.id); 
     userCoppy[userMember].id = users.id
+    userCoppy[userMember].image = users.image
     userCoppy[userMember].name = users.name
     userCoppy[userMember].adress = users.adress
     userCoppy[userMember].phoneNumber = users.phoneNumber

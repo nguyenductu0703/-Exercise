@@ -8,6 +8,7 @@ const Modal = ({ onAdd,type,members, handleEdit }) => {
         setClose(true)
     };
     const [user, setUsers] = useState({
+        image:'',
         name:'',
         adress:'',
         phoneNumber:'',
@@ -23,17 +24,22 @@ const Modal = ({ onAdd,type,members, handleEdit }) => {
     };
     const List = (members) =>{
         setUsers(members)
-    }   
-  return (
-     <div>{type==='Add' ?
-     <button className="btn" onClick={close} type="button">Thêm Mới</button>:
-            <div>Edit<span className="button" onClick= {() =>{
-             close()
-             List(members)
-         }}><i className="ti-marker-alt"></i></span></div>}
+    };
+    const handleAvatar =(e)=>{
+        const file = e.target.files[0]
+        setUsers({...user, image:URL.createObjectURL(file)})
 
-            <div className='body-form'>
-                <div className='form' style={closeModal ? {display:'block'} : {display:'none'}}>
+    }  
+return (
+    <div>{type==='Add' ?
+        <button className="btn" onClick={close} type="button">Thêm Mới</button>:
+            <div>Edit
+                    <span className="button" onClick= {() =>{
+                close()
+                List(members)
+                }}><i className="ti-marker-alt"></i></span></div>}
+            <div className='body-form' style={closeModal ? {display:'block'} : {display:'none'}}>
+                <div className='form'>
                     <div className='form-hear'>
                         <h2>Thêm thành viên</h2>
                         <span className="button" onClick={() =>{setClose(false)}}><i className="ti-close"></i></span>
@@ -42,10 +48,10 @@ const Modal = ({ onAdd,type,members, handleEdit }) => {
                     <input value = {user.adress} onChange ={(e) => setUsers({...user, adress:e.target.value})} text="name" placeholder="Nhập vào địa chỉ..."></input>
                     <input value = {user.phoneNumber} onChange ={(e) => setUsers({...user, phoneNumber:e.target.value})} text="name" placeholder="Nhập vào số điện thoại..."></input>
                     <input value = {user.year} onChange ={(e) => setUsers({...user, year:e.target.value})} text="name" placeholder="Nhập vào năm sinh..."></input>
+                    <input multiple onChange ={handleAvatar} type="file" />
                     {type === 'Add' ?
                     <button className="submit" onClick={HandleSubmit} type="button">ADD</button>:
                     <button className="submit" onClick={HandleSubmit} type="button">Save</button>}
-
                 </div>
             </div>
      </div> 

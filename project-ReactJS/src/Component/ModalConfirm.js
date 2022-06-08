@@ -17,8 +17,8 @@ const ModalConfirm = ({ members, handleDelete }) => {
          <span className="button" onClick= {() =>{
              close()
          }}><i className="ti-trash"></i></span>
-            <div className='body-form-confirm'>
-                <div className='form' style={closeModal ? {display:'block'} : {display:'none'}}>
+            <div className='body-form'style={closeModal ? {display:'block'} : {display:'none'}}>
+                <div className='form'>
                     <div className='form-hear'>
                         <h2>Bạn có xác nhận xóa hay hay không</h2>
                         <span className="button" onClick={() =>{setClose(false)}}><i className="ti-close"></i></span>

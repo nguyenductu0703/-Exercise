@@ -3,14 +3,27 @@
     margin: 0;
     box-sizing: border-box;
 }
+.body-form{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(180, 188, 184, 0.663);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;    
+}
 
 .form{
-    width:500px;
+    width:35%;
     background-color: aquamarine;
-    position: absolute;
-    top: 30%;
-    left:35%;
     padding: 10px 0;
+    position: absolute;
+    top: 21%;
+    left: 35%;
+    
 
 }
 .form-hear{
@@ -37,6 +50,9 @@
     width: 95%
     
 }
+.form input:hover{
+    cursor: pointer;
+}
 .submit{
 
     top:87%;
@@ -49,4 +65,11 @@
     float: right;
     margin-right: 50px;
     color: rgb(47, 58, 4);
+}
+img{
+    width:100px;
+    height: 100px;
+}
+span:hover{
+    background-color:red
 }
